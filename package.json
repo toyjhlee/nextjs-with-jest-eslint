@@ -1,0 +1,58 @@
+{
+  "name": "nextjs-with-jest-eslint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "yarn jest",
+    "test:watch": "yarn jest -- --watch",
+    "eslint": "eslint ./**/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^9.1.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "babel-plugin-import": "^1.12.2",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-styled-components": "^1.10.6"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "husky": "^3.0.5",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-adapter-react-16.3": "^1.7.2",
+    "enzyme-to-json": "^3.4.0",
+    "identity-obj-proxy": "^3.0.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn eslint && yarn test"
+    }
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/.docz/"
+    ],
+    "setupFilesAfterEnv": [
+      "./setupTest.js"
+    ],
+    "moduleNameMapper": {
+      "^@src(.*)$": "<rootDir>/src/$1",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  }
+}

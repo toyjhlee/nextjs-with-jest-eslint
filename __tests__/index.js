@@ -1,0 +1,12 @@
+import React from 'react'
+import { mount } from 'enzyme'
+import IndexPage from '../pages/index'
+
+describe('Pages', () => {
+  describe('Index', () => {
+    it('should render without throwing an error', () => {
+      const wrap = mount(<IndexPage />)
+      expect(wrap.find('div').text()).toBe('Hello Next.js with jest and enzyme and eslint')
+    })
+  })
+})
