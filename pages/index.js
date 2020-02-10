@@ -1,8 +1,10 @@
 import React from 'react'
 
+import font from '@static/font.module.sass'
+
 const Index = () => (
   <div>
-    <p>Hello Next.js with jest and enzyme and eslint</p>
+    <p className={font.red}>Hello Next.js with jest and enzyme and eslint</p>
   </div>
 )
 
