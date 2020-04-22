@@ -1,13 +1,13 @@
 {
   "presets": ["next/babel"],
   "plugins": [
-    [
-      "import",
-      {
-        "libraryName": "antd",
-        "style": "css"
-      }
-    ],
+    // [
+    //   "import",
+    //   {
+    //     "libraryName": "antd",
+    //     "style": "css"
+    //   }
+    // ],
     [
       "styled-components",
       {
@@ -17,11 +17,11 @@
       }
     ],
     ["module-resolver", {
-     "root": ["./src"],
-     "alias": {
-       "@app": "./",
-       "@static": "./static",
-       "@components": "./components"
+      "root": ["./src"],
+      "alias": {
+        "@app": "./",
+        "@static": "./static",
+        "@components": "./components"
      }
    }]
   ]

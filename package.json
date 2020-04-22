@@ -9,33 +9,41 @@
     "start": "next start",
     "test": "yarn jest",
     "test:watch": "yarn jest -- --watch",
-    "eslint": "eslint ./**/*.js"
+    "eslint": "eslint ./pages/*.js ./__tests__/*.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^9.1.6",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "@babel/runtime-corejs2": "^7.9.2",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.0",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.12.2",
     "babel-plugin-module-resolver": "^3.2.0",
-    "babel-plugin-styled-components": "^1.10.6"
-  },
-  "devDependencies": {
-    "jest": "^24.9.0",
-    "husky": "^3.0.5",
+    "babel-plugin-styled-components": "^1.10.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-adapter-react-16.3": "^1.7.2",
     "enzyme-to-json": "^3.4.0",
-    "identity-obj-proxy": "^3.0.0",
+    "next": "^9.2.3-canary.12",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.3.0"
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^3.0.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0"
   },
   "husky": {
     "hooks": {
@@ -44,6 +52,7 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
       "<rootDir>/.docz/"
     ],
     "setupFilesAfterEnv": [
@@ -51,8 +60,10 @@
     ],
     "moduleNameMapper": {
       "^@src(.*)$": "<rootDir>/src/$1",
+      "^@static(.*)$": "<rootDir>/static/$1",
+      "^@components(.*)$": "<rootDir>/components/$1",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "identity-obj-proxy"
+      "\\.(css|less|sass)$": "identity-obj-proxy"
     }
   }
 }
