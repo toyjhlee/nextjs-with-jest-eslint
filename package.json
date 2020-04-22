@@ -28,7 +28,7 @@
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-adapter-react-16.3": "^1.7.2",
     "enzyme-to-json": "^3.4.0",
-    "next": "^9.2.3-canary.12",
+    "next": ">=9.3.2",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -43,7 +43,10 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "husky": "^3.0.5",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "minimist": ">=1.2.3",
+    "acorn": ">=6.4.1",
+    "kind-of": ">=6.0.3"
   },
   "husky": {
     "hooks": {
